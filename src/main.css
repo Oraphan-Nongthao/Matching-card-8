@@ -1,0 +1,110 @@
+.background-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container { 
+    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: 85px 85px 85px ;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    }
+
+    .container > :nth-child(1),
+    .container > :nth-child(2),
+    .container > :nth-child(3) {
+    grid-column: span 1;
+    }
+
+    .container  > :nth-child(4){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .container > :nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+    }
+
+    .container > :nth-child(6),
+    .container > :nth-child(7),
+    .container > :nth-child(8) {
+    grid-column: span 1;
+    grid-row: 3/3;
+    }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    animation: 1.5s hideCard linear;
+    transition: transform 0.5s;
+  
+  }
+  /* พลิกการ์ดซ้ายไปขวา */
+  @keyframes hideCard {
+    0% ,70%  {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+  }
+  
+  .card-img {
+    width: 65px;
+    height: auto;
+    position: relative;
+    display: flex;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-img.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card-img img {
+    display: flex;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .card-img img:last-child {
+    transform: rotateY(180deg);
+  }
+  
+  .restartGame {
+    margin-top: -10px;
+    margin-left: 241px;
+    background-color: red;
+    font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    padding-top: -10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+  
